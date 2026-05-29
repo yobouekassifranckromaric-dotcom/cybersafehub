@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActuWorld</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <nav>
+    <h1>CyberSafe Hub 🔐</h1>
+
+    <div class="nav-right">
+        <button onclick="changerTheme()" id="themeBtn">☀️ Mode clair</button>
+
+     <ul>
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#conseils">Conseils</a></li>
+    <li><a href="#motdepasse">Mot de passe</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#alertes">Alertes</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+    </div>
+</nav>   
+
+
+  <header id="accueil">
+        <h2>Bienvenue sur CyberSafe Hub 🔐</h2>
+        <p>Protégez votre vie numérique simplement</p>
+        <input type="text" id="searchBar" placeholder="Rechercher..." onkeyup="rechercherCarte()">
+    </header>
+
+    <section class="container">
+
+    <section class="cartes" id="conseils">
+
+    <div class="carte">
+        <img src="istockphoto-1366554092-612x612.jpg" alt="Mot de passe sécurisé">
+        <h3>🔐 Mots de passe sécurisés</h3>
+        <p>Utilisez des mots de passe longs, uniques et difficiles à deviner.</p>
+    </div>
+
+    <div class="carte">
+        <img src="téléchargement (1).jpg" alt="Phishing">
+        <h3>📧 Phishing</h3>
+        <p>Vérifiez toujours les emails suspects avant de cliquer sur un lien.</p>
+    </div>
+
+    <div class="carte">
+        <img src="téléchargement.png" alt="Sécurité Wi-Fi">
+        <h3>📶 Sécurité Wi-Fi</h3>
+        <p>Protégez votre réseau Wi-Fi avec un mot de passe fort et des mises à jour.</p>
+    </div>
+
+    <div class="carte">
+        <img src="images.jpg" alt="Réseaux sociaux">
+        <h3>📱 Réseaux sociaux</h3>
+        <p>Activez la double authentification et protégez vos comptes.</p>
+    </div>
+
+</section>
+    </div>
+
+</section>
+<section class="password-check search-item" id="motdepasse">
+    <h2>Vérificateur de mot de passe 🔐</h2>
+
+    <input type="password" id="passwordCheck" placeholder="Entrez un mot de passe">
+
+    <button onclick="verifierMotDePasse()">Vérifier</button>
+
+    <p id="resultatPassword"></p>
+</section>
+<section class="password-generator search-item">
+    <h2>Générateur de mot de passe 🔑</h2>
+
+    <button onclick="genererMotDePasse()">Générer</button>
+
+    <p id="motDePasseGenere"></p>
+</section>
+
+<section class="login-box">
+    <h2>Connexion 🔐</h2>
+
+    <input type="text" id="username" placeholder="Nom d'utilisateur">
+    <input type="password" id="password" placeholder="Mot de passe">
+
+    <button onclick="connexion()">Se connecter</button>
+
+    <p id="messageLogin"></p>
+</section>
+<section class="dashboard search-item" id="dashboard"></section>
+    <h2>Dashboard Cybersécurité 🖥️</h2>
+
+    <div class="dash-container">
+        <div class="dash-card">
+            <h3>⚠️ Alertes</h3>
+            <p id="alertes">0</p>
+        </div>
+
+        <div class="dash-card">
+            <h3>👤 Connexions</h3>
+            <p id="connexions">0</p>
+        </div>
+
+        <div class="dash-card">
+            <h3>🌐 Réseau actif</h3>
+            <p id="reseau">0%</p>
+        </div>
+
+        <div class="dash-card">
+            <h3>🔒 Sécurité</h3>
+            <p>Stable</p>
+        </div>
+    </div>
+</section>
+<section class="faq-section search-item">
+    <h2>FAQ Cybersécurité ❓</h2>
+
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq1')">C’est quoi le phishing ?</button>
+        <p id="faq1" class="faq-reponse">Le phishing est une tentative de vol d’informations via de faux emails ou sites web.</p>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq2')">Comment sécuriser son Wi-Fi ?</button>
+        <p id="faq2" class="faq-reponse">Utilisez un mot de passe fort, WPA2/WPA3 et mettez à jour votre routeur.</p>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq3')">Pourquoi avoir un mot de passe fort ?</button>
+        <p id="faq3" class="faq-reponse">Un mot de passe fort réduit les risques de piratage et d’accès non autorisé.</p>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleFAQ('faq4')">C’est quoi la double authentification ?</button>
+        <p id="faq4" class="faq-reponse">C’est une sécurité supplémentaire qui demande une deuxième vérification après le mot de passe.</p>
+    </div>
+</section>
+<section class="contact-box search-item" id="contact">
+    <h2>Contact / Assistance 📩</h2>
+
+    <input type="text" id="nomContact" placeholder="Votre nom">
+
+    <input type="email" id="emailContact" placeholder="Votre email">
+
+    <textarea id="messageContact" placeholder="Votre message"></textarea>
+
+    <button onclick="envoyerMessage()">Envoyer</button>
+
+    <p id="confirmationContact"></p>
+</section>
+<section class="graph-section">
+    <h2>Activité Réseau 📊</h2>
+
+    <div class="graph">
+        <div class="bar">
+            <span>Lundi</span>
+            <div class="niveau n1" id="bar1"></div>
+        </div>
+
+        <div class="bar">
+            <span>Mardi</span>
+            <div class="niveau n2" id="bar2"></div>
+        </div>
+
+        <div class="bar">
+            <span>Mercredi</span>
+            <div class="niveau n3" id="bar3"></div>
+        </div>
+
+        <div class="bar">
+            <span>Jeudi</span>
+            <div class="niveau n4" id="bar4"></div>
+        </div>
+
+        <div class="bar">
+            <span>Vendredi</span>
+            <div class="niveau n5" id="bar5"></div>
+        </div>
+    </div>
+</section>
+<section class="alert-box search-item" id="alertes">
+    <h2>Alertes Sécurité 🔔</h2>
+    <p id="alerteTexte">Chargement des alertes...</p>
+  <button onclick="scanReseau()">Lancer Scan Réseau</button>
+<p id="scanMessage"></p>  
+</section>
+<footer>
+    <h3>CyberSafe Hub 🔐</h3>
+    <p>Sensibilisation • Sécurité • Protection</p>
+    <p>© 2026 Tous droits réservés</p>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

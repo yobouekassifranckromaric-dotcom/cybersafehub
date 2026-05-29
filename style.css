@@ -1,0 +1,388 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+}
+
+nav {
+    background-color: blue;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header {
+    text-align: center;
+    padding: 120px 50px 50px 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.carte {
+    background-color: #1a1a1a;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    overflow: hidden; 
+    max-width: 300px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.carte img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+    .cartes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+
+.carte:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+#themeBtn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav li:hover {
+    color: yellow;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cache {
+    display: none;
+    margin-top: 10px;
+}
+.carte img {
+    transition: 0.3s;
+}
+
+.carte:hover img {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding: 160px 20px 40px 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+#searchBar {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.login-box {
+    background-color: #1a1a1a;
+    width: 300px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+#messageLogin {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.dashboard {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.dash-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dash-card {
+    background-color: #1a1a1a;
+    width: 180px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.dash-card:hover {
+    transform: translateY(-8px);
+}
+
+.dash-card h3 {
+    margin-bottom: 10px;
+}
+.graph-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.graph {
+    max-width: 500px;
+    margin: auto;
+}
+
+.bar {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.bar span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.niveau {
+    height: 20px;
+    background-color: lime;
+    border-radius: 10px;
+    transition: 0.1s;
+    width: 0;
+}
+
+.niveau:hover {
+    transform: scaleX(1.03);
+}
+
+.n1 { width: 40%; }
+.n2 { width: 80%; }
+.n3 { width: 30%; }
+.n4 { width: 65%; }
+.n5 { width: 90%; }
+.alert-box {
+    background-color: #1a1a1a;
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#alerteTexte {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#scanMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.password-check {
+    background-color: #1a1a1a;
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.password-check input {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+#resultatPassword {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.contact-box {
+    background-color: #1a1a1a;
+    width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+.contact-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+#confirmationContact {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.faq-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.faq-item {
+    margin: 15px 0;
+}
+
+.faq-item button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-reponse {
+    display: none;
+    margin-top: 10px;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+}
+.password-generator {
+    background-color: #1a1a1a;
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#motDePasseGenere {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: lime;
+    word-break: break-word;
+}
