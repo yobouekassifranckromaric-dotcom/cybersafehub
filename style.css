@@ -386,3 +386,54 @@ footer p {
     color: lime;
     word-break: break-word;
 }
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carte {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .password-check,
+    .password-generator,
+    .contact-box,
+    .faq-section,
+    .alert-box {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+}
