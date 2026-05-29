@@ -176,3 +176,10 @@ function genererMotDePasse() {
 
     document.getElementById("motDePasseGenere").innerText = motDePasse;
 }
+function toggleMenu() {
+
+    let menu = document.getElementById("navLinks");
+
+    menu.classList.toggle("active");
+
+}
